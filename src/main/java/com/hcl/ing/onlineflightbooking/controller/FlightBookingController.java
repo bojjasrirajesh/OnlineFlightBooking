@@ -1,9 +1,16 @@
 package com.hcl.ing.onlineflightbooking.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hcl.ing.onlineflightbooking.dto.BookingRequestDto;
+import com.hcl.ing.onlineflightbooking.dto.BookingResponseDto;
+import com.hcl.ing.onlineflightbooking.exception.NoSeatAvaliableException;
+import com.hcl.ing.onlineflightbooking.exception.NoUserDataAvaliableException;
+import com.hcl.ing.onlineflightbooking.service.FlightBookingService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,8 +25,18 @@ import lombok.extern.slf4j.Slf4j;
 
 @CrossOrigin(allowedHeaders = { "*", "*/" }, origins = { "*", "*/" })
 @RestController
-@RequestMapping("/booking")
 @Slf4j
 public class FlightBookingController {
+	
+	@Autowired
+	FlightBookingService flightBookingService;
+	
+	@PostMapping("/ticketBooking/")
+	public BookingResponseDto ticketBooking(BookingRequestDto bookingRequestDto) throws NoSeatAvaliableException, NoUserDataAvaliableException
+	{
+		
+		BookingResponseDto bookingResponseDto=	flightBookingService.bookFlight(bookingRequestDto);
+		return null;
+	}
 
 }

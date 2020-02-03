@@ -16,6 +16,10 @@ public static final String BOOK_ADD_SUCCESS = "Book added successfully";
 	
 	public static final String AVAILABLE = "Available";
 	
+	public static final String NO_SEAT_AVAILABLE = "No Seat Available For Booking";
+	
+	public static final String NOT_AVAILABLE = "Passanger Data Not Available";
+	
 	public static final String PENDING = "Pending";
 	
 	public static final String REGISTER_SUCCESS = "Register Successfull";
