@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.hcl.ing.onlineflightbooking.dto.LocationResponseDto;
 import com.hcl.ing.onlineflightbooking.service.LocationService;
+import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
 /**
  * This class for the to get list of locations
  * @author bojja.r
@@ -25,7 +26,6 @@ public class LocationsController {
 	
 	 @Autowired 
 	 LocationService locationService;
-
 	 /**
 		 * This method is used to get all locations 
 		 * 
@@ -33,7 +33,7 @@ public class LocationsController {
 		 */
 	 @GetMapping(value = "/getLocations") 
 	 public LocationResponseDto getAllLocations() { 
-		 LOGGER.info("getAllLocations Method in LocationsController started");
+		 LOGGER.info(LibraryUtil.ALL_LOCATIONS_METHOD);
 		 return locationService.getAllLocations();
 	 }
 }

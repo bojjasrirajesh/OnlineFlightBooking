@@ -14,6 +14,7 @@ import com.hcl.ing.onlineflightbooking.dto.RegistrationDto;
 import com.hcl.ing.onlineflightbooking.dto.LoginResponseDto;
 import com.hcl.ing.onlineflightbooking.dto.RegisterResponseDto;
 import com.hcl.ing.onlineflightbooking.service.UserService;
+import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
 
 /**
  * 
@@ -39,7 +40,7 @@ public class UserController {
 		 */
 	 @PostMapping(value = "/login") 
 	 public LoginResponseDto usersLogin(@RequestBody LoginDto loginDto) { 
-		 LOGGER.info("login Method in UserController started");
+		 LOGGER.info(LibraryUtil.LOGIN_METHOD);
 		 return userService.usersLogin(loginDto);
 	 }
 	 /**
@@ -49,7 +50,7 @@ public class UserController {
 		 */
 	 @PostMapping(value = "/register") 
 	 public RegisterResponseDto	 usersRegister(@RequestBody RegistrationDto registrationDto) {
-	 LOGGER.info("register Method in UserController started");
+	 LOGGER.info(LibraryUtil.REGISTER_METHOD);
 	 return	 userService.usersRegister(registrationDto); 
 	 }
 	 

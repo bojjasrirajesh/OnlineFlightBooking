@@ -55,8 +55,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public RegisterResponseDto usersRegister(RegistrationDto registrationDto) {
 		
-		if(registrationDto.getUserName()==null) {
-			throw new RegistrationFailedExcpetion("please provide the all required details");
+		if(registrationDto.getUserName()==null||registrationDto.getPassword()==null) {
+			throw new RegistrationFailedExcpetion(LibraryUtil.PROVIDE_ALL_REQUIRED_FIELDS);
 		}
 		Users user = new Users();
 

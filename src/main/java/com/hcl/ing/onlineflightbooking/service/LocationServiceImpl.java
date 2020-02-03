@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.hcl.ing.onlineflightbooking.dto.LocationResponseDto;
 import com.hcl.ing.onlineflightbooking.entity.Locations;
 import com.hcl.ing.onlineflightbooking.repository.LocationRepository;
+import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
 
 
 @Service
@@ -20,9 +21,8 @@ public class LocationServiceImpl implements LocationService {
 	@Override
 	public LocationResponseDto getAllLocations() {
 		List<Locations> listOfLocations = locationRepository.findAll();
-		
 		LocationResponseDto responseDto=new LocationResponseDto();
-		responseDto.setMessage("Success");
+		responseDto.setMessage(LibraryUtil.SUCCESS);
 		responseDto.setStatusCode(HttpStatus.OK.value());
 		responseDto.setLocations(listOfLocations);
 		
