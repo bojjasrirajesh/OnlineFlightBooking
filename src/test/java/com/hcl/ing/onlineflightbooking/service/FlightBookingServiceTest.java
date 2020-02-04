@@ -77,7 +77,7 @@ public class FlightBookingServiceTest {
 		bookingResponseDto.setFlightTravelDetailsId(bookingRequestDtos.getFlightTravelDetailsId());
 		bookingResponseDto.setStatus("Success");
 		bookingResponseDto.setUserId(bookingRequestDtos.getUserId());
-		flightTravelDetails= new FlightTravelDetails();
+	
 		  flightTravelDetails.setArrivalDateTime(LocalDateTime.now());
 		  flightTravelDetails.setBusinessClassPrice(5000);
 		  flightTravelDetails.setDepartureDateTime(LocalDateTime.now().plusHours(1));
@@ -87,7 +87,7 @@ public class FlightBookingServiceTest {
 		  flightTravelDetails.setFromLocation("Hyderabad");
 		  flightTravelDetails.setSeatAvailability(10);
 		  flightTravelDetails.setToLocation("Bangalore");
-		  flightTravelDetails.setTravelDate(LocalDateTime.now());
+		  
 		 
 	
 		

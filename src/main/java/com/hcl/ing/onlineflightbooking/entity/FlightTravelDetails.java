@@ -22,8 +22,10 @@ public class FlightTravelDetails {
 	private Integer businessClassPrice;
 	private Integer economyClassPrice;
 	private Integer seatAvailability;
+
 	private LocalDateTime travelDate;
 	
+
 	public Long getFlightTravelDetailsId() {
 		return flightTravelDetailsId;
 	}
@@ -78,10 +80,35 @@ public class FlightTravelDetails {
 	public void setSeatAvailability(Integer seatAvailability) {
 		this.seatAvailability = seatAvailability;
 	}
+	
+	
+	
+
 	public LocalDateTime getTravelDate() {
 		return travelDate;
 	}
-	public void setTravelDate(LocalDateTime travelDate) {
-		this.travelDate = travelDate;
+	@Override
+	public String toString() {
+		return "FlightTravelDetails [flightTravelDetailsId=" + flightTravelDetailsId + ", flightId=" + flightId
+				+ ", fromLocation=" + fromLocation + ", toLocation=" + toLocation + ", departureDateTime="
+				+ departureDateTime + ", arrivalDateTime=" + arrivalDateTime + ", businessClassPrice="
+				+ businessClassPrice + ", economyClassPrice=" + economyClassPrice + ", seatAvailability="
+				+ seatAvailability + ", travelDate=" + travelDate + "]";
 	}
+	public FlightTravelDetails(Long flightTravelDetailsId, Long flightId, String fromLocation, String toLocation,
+			LocalDateTime departureDateTime, LocalDateTime arrivalDateTime, Integer businessClassPrice,
+			Integer economyClassPrice, Integer seatAvailability,LocalDateTime travelDate) {
+		super();
+		this.flightTravelDetailsId = flightTravelDetailsId;
+		this.flightId = flightId;
+		this.fromLocation = fromLocation;
+		this.toLocation = toLocation;
+		this.departureDateTime = departureDateTime;
+		this.arrivalDateTime = arrivalDateTime;
+		this.businessClassPrice = businessClassPrice;
+		this.economyClassPrice = economyClassPrice;
+		this.seatAvailability = seatAvailability;
+		this.travelDate=travelDate;
+	}
+	
 }
