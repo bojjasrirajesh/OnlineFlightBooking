@@ -6,17 +6,19 @@ public class RegistrationDto implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 
-	private String uName;
+	private String userName;
 	private String password;
 	private String mobNum;
 	private String eMail;
 
-	public String getuName() {
-		return uName;
+	
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setuName(String uName) {
-		this.uName = uName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
