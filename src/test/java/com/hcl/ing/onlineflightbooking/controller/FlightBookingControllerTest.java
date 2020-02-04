@@ -12,9 +12,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
 import com.hcl.ing.onlineflightbooking.dto.BookingRequestDto;
 import com.hcl.ing.onlineflightbooking.dto.BookingResponseDto;
 import com.hcl.ing.onlineflightbooking.entity.Passangers;
@@ -22,7 +21,6 @@ import com.hcl.ing.onlineflightbooking.exception.NoSeatAvaliableException;
 import com.hcl.ing.onlineflightbooking.exception.NoUserDataAvaliableException;
 import com.hcl.ing.onlineflightbooking.exception.SufficientSeatNotAvaliableException;
 import com.hcl.ing.onlineflightbooking.service.FlightBookingService;
-import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
 
 @RunWith(MockitoJUnitRunner.Silent.class)
 public class FlightBookingControllerTest {

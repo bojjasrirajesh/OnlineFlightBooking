@@ -7,10 +7,12 @@ import java.util.List;
 
 import java.util.Objects;
 
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hcl.ing.onlineflightbooking.controller.LocationsController;
 import com.hcl.ing.onlineflightbooking.dto.BookingRequestDto;
 import com.hcl.ing.onlineflightbooking.dto.BookingResponseDto;
 import com.hcl.ing.onlineflightbooking.entity.Bookings;
@@ -21,6 +23,7 @@ import com.hcl.ing.onlineflightbooking.exception.NoUserDataAvaliableException;
 import com.hcl.ing.onlineflightbooking.exception.SufficientSeatNotAvaliableException;
 import com.hcl.ing.onlineflightbooking.repository.BookingRepository;
 import com.hcl.ing.onlineflightbooking.repository.FlightTravelDetailsRepository;
+import com.hcl.ing.onlineflightbooking.repository.PassangerRepository;
 import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
 
 import lombok.extern.slf4j.Slf4j;
@@ -32,6 +35,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class FlightBookingServiceImpl implements FlightBookingService {
 
+	private static final Logger log = LoggerFactory.getLogger(LocationsController.class); 
 	@Autowired
 	FlightTravelDetailsRepository flightTravelDetailsRepository;
 
