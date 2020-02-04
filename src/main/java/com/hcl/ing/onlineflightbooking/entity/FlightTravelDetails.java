@@ -23,6 +23,13 @@ public class FlightTravelDetails {
 	private Integer businessClassPrice;
 	private Integer economyClassPrice;
 	private Integer seatAvailability;
+	private String travelDate;
+	public String getTravelDate() {
+		return travelDate;
+	}
+	public void setTravelDate(String travelDate) {
+		this.travelDate = travelDate;
+	}
 	public Long getFlightTravelDetailsId() {
 		return flightTravelDetailsId;
 	}
@@ -83,11 +90,11 @@ public class FlightTravelDetails {
 				+ ", fromLocation=" + fromLocation + ", toLocation=" + toLocation + ", departureDateTime="
 				+ departureDateTime + ", arrivalDateTime=" + arrivalDateTime + ", businessClassPrice="
 				+ businessClassPrice + ", economyClassPrice=" + economyClassPrice + ", seatAvailability="
-				+ seatAvailability + "]";
+				+ seatAvailability + ", travelDate=" + travelDate + "]";
 	}
 	public FlightTravelDetails(Long flightTravelDetailsId, Long flightId, String fromLocation, String toLocation,
 			LocalDateTime departureDateTime, LocalDateTime arrivalDateTime, Integer businessClassPrice,
-			Integer economyClassPrice, Integer seatAvailability) {
+			Integer economyClassPrice, Integer seatAvailability,String travelDate) {
 		super();
 		this.flightTravelDetailsId = flightTravelDetailsId;
 		this.flightId = flightId;
@@ -98,6 +105,7 @@ public class FlightTravelDetails {
 		this.businessClassPrice = businessClassPrice;
 		this.economyClassPrice = economyClassPrice;
 		this.seatAvailability = seatAvailability;
+		this.travelDate=travelDate;
 	}
 	public FlightTravelDetails() {
 		super();

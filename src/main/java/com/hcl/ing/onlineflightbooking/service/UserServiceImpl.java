@@ -12,6 +12,7 @@ import com.hcl.ing.onlineflightbooking.dto.LoginResponseDto;
 import com.hcl.ing.onlineflightbooking.dto.RegisterResponseDto;
 import com.hcl.ing.onlineflightbooking.dto.RegistrationDto;
 import com.hcl.ing.onlineflightbooking.entity.Users;
+import com.hcl.ing.onlineflightbooking.exception.InvalidUserException;
 import com.hcl.ing.onlineflightbooking.exception.RegistrationFailedExcpetion;
 import com.hcl.ing.onlineflightbooking.repository.UserRepository;
 import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
@@ -28,16 +29,6 @@ public class UserServiceImpl implements UserService {
 		List<Users> users = userRepository.findAll();
 		LoginResponseDto responseDto = new LoginResponseDto();
 
-		/*
-		 * users.stream().forEach(user -> { if
-		 * ((userDto.getuName().equalsIgnoreCase(user.getUserName()))&&
-		 * (user.getPassword().equals(userDto.getPassword()))) {
-		 * responseDto.setMessage(LibraryUtil.LOGIN_SUCCESS);
-		 * responseDto.setStatusCode(HttpStatus.OK.value());
-		 * responseDto.setUserId(user.getUserId()); }
-		 * if(!(user.getUserName().equals(userDto.getuName()))){ throw new
-		 * InvalidUserException("Invlid user please enter valide user name"); } });
-		 */
 		for (Users user : users) {
 			if ((userDto.getuName().equalsIgnoreCase(user.getUserName()))
 					&& (user.getPassword().equals(userDto.getPassword()))) {
