@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.hcl.ing.onlineflightbooking.dto.LoginDto;
-import com.hcl.ing.onlineflightbooking.dto.RegistrationDto;
 import com.hcl.ing.onlineflightbooking.dto.LoginResponseDto;
 import com.hcl.ing.onlineflightbooking.dto.RegisterResponseDto;
+import com.hcl.ing.onlineflightbooking.dto.RegistrationDto;
 import com.hcl.ing.onlineflightbooking.service.UserService;
 import com.hcl.ing.onlineflightbooking.util.LibraryUtil;
 
