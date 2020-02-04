@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "flighttraveldetails")
 public class FlightTravelDetails {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long flightTravelDetailsId;
@@ -23,6 +22,8 @@ public class FlightTravelDetails {
 	private Integer businessClassPrice;
 	private Integer economyClassPrice;
 	private Integer seatAvailability;
+	private LocalDateTime travelDate;
+	
 	public Long getFlightTravelDetailsId() {
 		return flightTravelDetailsId;
 	}
@@ -77,34 +78,10 @@ public class FlightTravelDetails {
 	public void setSeatAvailability(Integer seatAvailability) {
 		this.seatAvailability = seatAvailability;
 	}
-	@Override
-	public String toString() {
-		return "FlightTravelDetails [flightTravelDetailsId=" + flightTravelDetailsId + ", flightId=" + flightId
-				+ ", fromLocation=" + fromLocation + ", toLocation=" + toLocation + ", departureDateTime="
-				+ departureDateTime + ", arrivalDateTime=" + arrivalDateTime + ", businessClassPrice="
-				+ businessClassPrice + ", economyClassPrice=" + economyClassPrice + ", seatAvailability="
-				+ seatAvailability + "]";
+	public LocalDateTime getTravelDate() {
+		return travelDate;
 	}
-	public FlightTravelDetails(Long flightTravelDetailsId, Long flightId, String fromLocation, String toLocation,
-			LocalDateTime departureDateTime, LocalDateTime arrivalDateTime, Integer businessClassPrice,
-			Integer economyClassPrice, Integer seatAvailability) {
-		super();
-		this.flightTravelDetailsId = flightTravelDetailsId;
-		this.flightId = flightId;
-		this.fromLocation = fromLocation;
-		this.toLocation = toLocation;
-		this.departureDateTime = departureDateTime;
-		this.arrivalDateTime = arrivalDateTime;
-		this.businessClassPrice = businessClassPrice;
-		this.economyClassPrice = economyClassPrice;
-		this.seatAvailability = seatAvailability;
+	public void setTravelDate(LocalDateTime travelDate) {
+		this.travelDate = travelDate;
 	}
-	public FlightTravelDetails() {
-		super();
-	}
-	
-	
-	
-	
-
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.hcl.ing.onlineflightbooking.entity.Passangers;
 
 @Repository
-public interface PassangerRepository extends JpaRepository<Passangers,Long>  {
+public interface PassangerRepository extends JpaRepository<Passangers,Long>{
 
 }
