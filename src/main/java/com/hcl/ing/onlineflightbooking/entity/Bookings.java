@@ -1,9 +1,13 @@
 package com.hcl.ing.onlineflightbooking.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +20,8 @@ public class Bookings {
 	private Long userId;
 	private Long flightTravelDetailsId;
 	private String status;
+
+	
 	public Long getBookingId() {
 		return bookingId;
 	}
@@ -40,23 +46,6 @@ public class Bookings {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	@Override
-	public String toString() {
-		return "Bookings [bookingId=" + bookingId + ", userId=" + userId + ", flightTravelDetailsId="
-				+ flightTravelDetailsId + ", status=" + status + "]";
-	}
-	public Bookings(Long bookingId, Long userId, Long flightTravelDetailsId, String status) {
-		super();
-		this.bookingId = bookingId;
-		this.userId = userId;
-		this.flightTravelDetailsId = flightTravelDetailsId;
-		this.status = status;
-	}
-	public Bookings() {
-		super();
-	}
-	
-	
-	
 
+	
 }

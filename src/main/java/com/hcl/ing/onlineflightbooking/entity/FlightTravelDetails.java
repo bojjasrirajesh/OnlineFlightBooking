@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "flighttraveldetails")
 public class FlightTravelDetails {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long flightTravelDetailsId;
@@ -37,6 +36,8 @@ public class FlightTravelDetails {
 	public void setTravelDate(String travelDate) {
 		this.travelDate = travelDate;
 	}
+
+
 	public Long getFlightTravelDetailsId() {
 		return flightTravelDetailsId;
 	}
@@ -91,6 +92,10 @@ public class FlightTravelDetails {
 	public void setSeatAvailability(Integer seatAvailability) {
 		this.seatAvailability = seatAvailability;
 	}
+	
+	
+	
+
 	@Override
 	public String toString() {
 		return "FlightTravelDetails [flightTravelDetailsId=" + flightTravelDetailsId + ", flightId=" + flightId
@@ -115,12 +120,5 @@ public class FlightTravelDetails {
 		this.travelDate=travelDate;
 		this.flightName=flightName;
 	}
-	public FlightTravelDetails() {
-		super();
-	}
 	
-	
-	
-	
-
 }
