@@ -13,6 +13,13 @@ public class SearchResponseDto implements Serializable{
 	private String message;
 	private Integer statusCode;
 	private List<FlightTravelDetails> flightTravelDetails;
+	private String flightName;
+	public String getFlightName() {
+		return flightName;
+	}
+	public void setFlightName(String flightName) {
+		this.flightName = flightName;
+	}
 	public String getMessage() {
 		return message;
 	}

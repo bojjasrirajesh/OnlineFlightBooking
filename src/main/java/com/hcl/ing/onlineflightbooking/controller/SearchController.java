@@ -23,7 +23,9 @@ public class SearchController {
 	@GetMapping("/searchresults")
 	public SearchResponseDto getSearchresult(@RequestParam String fromLocation,@RequestParam String toLocation,@RequestParam String travelDate) {
 		LOGGER.info("from getSearchresult method of SearchController started");
+		LOGGER.info("from "+fromLocation+"to"+toLocation+"trave"+travelDate);
 	SearchResponseDto responsedto=service.getsearchresult(fromLocation,toLocation,travelDate);
+	LOGGER.info("responsedto"+responsedto.toString());
 	
     return responsedto;
 		
